@@ -19,7 +19,7 @@ window.configure(background="light blue")
 
 v_fName = StringVar()
 v_password = StringVar()
-v_cofirmPassword = StringVar()
+v_confirmPassword = StringVar()
 v_phoneNo = StringVar()
 v_email = StringVar()
 v_gender = IntVar()
@@ -31,7 +31,7 @@ def validateAllFields():
         messagebox.showinfo("Information", "Please Enter Fullname to Proceed")
     elif v_password.get() == "":
         messagebox.showinfo("Information", "Please Enter Password to Proceed")
-    elif v_cofirmPassword.get() == "":
+    elif v_confirmPassword.get() == "":
         messagebox.showinfo("Information", "Please Confirm Password to Proceed")
     elif v_phoneNo.get() == "":
         messagebox.showinfo("Information", "Please Enter Phone Number to Proceed")
@@ -77,17 +77,13 @@ entry_password.place(x=240, y=170)
 
 lb_confirmPassword = Label(window, text="Confirm password", width=20, font=("bold", 10), bg="light blue")
 lb_confirmPassword.place(x=80, y=210)
-entry_confirmPassword = Entry(window, show="*", textvariable=v_cofirmPassword)
+entry_confirmPassword = Entry(window, show="*", textvariable=v_confirmPassword)
 entry_confirmPassword.place(x=240, y=210)
 
 lb_phoneNo = Label(window, text="Phone No.", width=20, font=("bold", 10), bg="light blue")
 lb_phoneNo.place(x=80, y=250)
 entry_phoneNo = Entry(window, textvariable=v_phoneNo)
 entry_phoneNo.place(x=240, y=250)
-
-# validate_phoneNo = window.register(validate_phoneno(v_phoneNo))
-# entry_phoneNo.config(validate="key", validateCommand=(validate_phoneNo, "%P"))
-
 
 
 lb_email = Label(window, text="Email", width=20, font=("bold", 10), bg="light blue")
